@@ -16,14 +16,17 @@ public class LoginPage {
         this.driver = driver;
     }
     
-    @FindBy(how = How.LINK_TEXT, using = "Login") 
-    private WebElement loginBtn;
+//    @FindBy(how = How.LINK_TEXT, using = "Login") 
+//    private WebElement loginBtn;
     @FindBy(how = How.NAME, using = "email") 
     private WebElement email;
     @FindBy(how = How.NAME, using = "password") 
     private WebElement password;
-    @FindBy(how = How.CSS, using = ".alert.alert-danger")
+    @FindBy(how = How.CSS, using = ".help-block")
     private WebElement errorMessage;
+    @FindBy(how = How.LINK_TEXT, using = "I forgot my password")
+    private WebElement forgotPwd;
+
     
     /**
      * Set the email and password after which, submit the form
@@ -34,6 +37,9 @@ public class LoginPage {
         this.email.sendKeys(email);
         this.password.sendKeys(password);
         this.email.submit();
+    }
+    public void forgotPassword(){
+        this.forgotPwd.click();
     }
     
     /**

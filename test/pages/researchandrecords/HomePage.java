@@ -1,4 +1,4 @@
-package pages.buyers;
+package pages.researchandrecords;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,13 +8,13 @@ import org.openqa.selenium.support.FindBy;
  *
  * @author chris
  */
-public class BuyerHomePage {
+public class HomePage {
 
     private final WebDriver driver;
-    @FindBy(css = "h3")
+    @FindBy(css = ".logo-lg")
     private WebElement header;
 
-    public BuyerHomePage(WebDriver driver) {
+    public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
