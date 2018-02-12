@@ -20,7 +20,7 @@ public class ResolutionPage {
 
     @FindBy(how = How.XPATH, using = "/html/body/div/aside[1]/div/section/ul[2]/li[3]/a")
     private WebElement rnrBtn;
-    @FindBy(how = How.XPATH, using = "/html/body/div/aside[1]/div/section/ul[2]/li[3]/ul/li[2]/a/span[1]")
+    @FindBy(how = How.XPATH, using = "/html/body/div/aside[1]/div/section/ul[2]/li[3]/ul/li[2]/a")
     private WebElement resolutionsBtn;
     @FindBy(how = How.XPATH, using = "/html/body/div/div[1]/section/div/div/div[2]/div[1]/a[1]")
     private WebElement addNewResolutionBtn;

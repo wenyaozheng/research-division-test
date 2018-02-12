@@ -41,7 +41,7 @@ public class ResolutionTest {
         loginPage.login("admin@example.com", "password");
 
         ResolutionPage addNewResoPage = PageFactory.initElements(driver, ResolutionPage.class);
-        addNewResoPage.addNewResolution("2", "2018", "Ordinance number 2", "ordinance");
+        addNewResoPage.addNewResolution("2", "2018", "Resolution number 2", "resolution");
         driver.close();
     }
 
