@@ -14,16 +14,16 @@ import org.openqa.selenium.support.How;
  *
  * @author Dell
  */
-public class OrdinancePage {
+public class ResolutionPage {
 
     private final WebDriver driver;
 
     @FindBy(how = How.XPATH, using = "/html/body/div/aside[1]/div/section/ul[2]/li[3]/a")
     private WebElement rnrBtn;
-    @FindBy(how = How.XPATH, using = "/html/body/div/aside[1]/div/section/ul[2]/li[3]/ul/li[1]/a")
-    private WebElement ordinanceBtn;
-    @FindBy(how = How.CSS, using = "body > div > div.content-wrapper > section > div > div > div.box-body > div.add-magin > a.btn.btn-success")
-    private WebElement addNewOrdinanceBtn;
+    @FindBy(how = How.XPATH, using = "/html/body/div/aside[1]/div/section/ul[2]/li[3]/ul/li[2]/a/span[1]")
+    private WebElement resolutionsBtn;
+    @FindBy(how = How.XPATH, using = "/html/body/div/div[1]/section/div/div/div[2]/div[1]/a[1]")
+    private WebElement addNewResolutionBtn;
     @FindBy(how = How.LINK_TEXT, using = "Reset Filtering")
     private WebElement resetFilteringBtn;
     @FindBy(how = How.NAME, using = "number")
@@ -36,24 +36,24 @@ public class OrdinancePage {
     private WebElement keywords;
     @FindBy(how = How.NAME, using = "pdf")
     private WebElement pdfUploadBtn;
-    @FindBy(how = How.XPATH, using = "//*[@id=\"ordinancesForm\"]/div[2]/button")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"resolutionsForm\"]/div[2]/button")
     private WebElement createBtn;
     @FindBy(how = How.LINK_TEXT, using = "View")
     private WebElement viewOrdBtn;
     @FindBy(how = How.LINK_TEXT, using = "Edit")
     private WebElement editOrdBtn;
-    @FindBy(how = How.XPATH, using = "//*[@id=\"ordinancesForm\"]/div[2]/button")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"resolutionsForm\"]/div[2]/button")
     private WebElement updateBtn;
-    @FindBy(how = How.XPATH, using = "/html/body/div/div[1]/section/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[5]/form/button")
+    @FindBy(how = How.XPATH, using = "/html/body/div/div[1]/section/div/div/div[2]/table/tbody/tr[1]/td[5]/form/button")
     private WebElement deleteOrdBtn;
-    @FindBy(how = How.XPATH, using = "/html/body/div/div[1]/section/div/div/div[2]/div[2]/div/table/thead/tr/th[1]/a")
+    @FindBy(how = How.XPATH, using = "/html/body/div/div[1]/section/div/div/div[2]/table/thead/tr/th[1]/a")
     private WebElement sortTableBtn;
     @FindBy(how = How.NAME, using = "q")
     private WebElement searchTextBoxBtn;
     @FindBy(how = How.XPATH, using = "//*[@id=\"search-btn\"]/i")
     private WebElement searchBtn;
 
-    public OrdinancePage(WebDriver driver) {
+    public ResolutionPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -66,10 +66,10 @@ public class OrdinancePage {
      * @param title
      * @param keyWords
      */
-    public void addNewOrdinance(String ordNum, String seriesNum, String title, String keyWords) {
+    public void addNewResolution(String ordNum, String seriesNum, String title, String keyWords) {
         this.rnrBtn.click();
-        this.ordinanceBtn.click();
-        this.addNewOrdinanceBtn.click();
+        this.resolutionsBtn.click();
+        this.addNewResolutionBtn.click();
         this.number.sendKeys(ordNum);
         this.series.sendKeys(seriesNum);
         this.title.sendKeys(title);
@@ -84,7 +84,7 @@ public class OrdinancePage {
      */
     public void resetFiltering() {
         this.rnrBtn.click();
-        this.ordinanceBtn.click();
+        this.resolutionsBtn.click();
         this.resetFilteringBtn.click();
         //assert if no more filter
     }
@@ -92,19 +92,21 @@ public class OrdinancePage {
     /**
      * View the ordinance profile
      */
-    public void viewOrdinance() {
+    public void viewResolution() {
         this.rnrBtn.click();
-        this.ordinanceBtn.click();
+        this.resolutionsBtn.click();
         this.viewOrdBtn.click();
         //assert if no more filter
     }
 
     /**
      * Modify the contents of the ordinance
+     * 
+     * @param ordNum
      */
-    public void editOrdinance(String ordNum) {
+    public void editResolution(String ordNum) {
         this.rnrBtn.click();
-        this.ordinanceBtn.click();
+        this.resolutionsBtn.click();
         this.editOrdBtn.click();
         this.number.sendKeys(ordNum);
         this.updateBtn.click();
@@ -114,9 +116,9 @@ public class OrdinancePage {
     /**
      * Remove the ordinance from the list
      */
-    public void deleteOrdinance() {
+    public void deleteResolution() {
         this.rnrBtn.click();
-        this.ordinanceBtn.click();
+        this.resolutionsBtn.click();
         this.deleteOrdBtn.click();
         //assert if no more filter
     }
@@ -126,17 +128,19 @@ public class OrdinancePage {
      */
     public void tableSorting() {
         this.rnrBtn.click();
-        this.ordinanceBtn.click();
+        this.resolutionsBtn.click();
         this.sortTableBtn.click();
         //assert if no more filter
     }
 
     /**
-     * Sort the table columns
+     * Search for a specific item
+     * 
+     * @param searchWord
      */
     public void searchFunction(String searchWord) {
         this.rnrBtn.click();
-        this.ordinanceBtn.click();
+        this.resolutionsBtn.click();
         this.searchTextBoxBtn.sendKeys(searchWord);
         this.searchBtn.click();
         //assert if no more filter

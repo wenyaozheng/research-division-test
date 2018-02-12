@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Dell/Desktop/Projects/haranah-qa/test/tests/buyers/BuyerLoginTest.java</file>
-            <file>file:/C:/Users/Dell/Desktop/Projects/haranah-qa/test/pages/buyers/BuyerHomePage.java</file>
-            <file>file:/C:/Users/Dell/Desktop/Projects/haranah-qa/test/pages/LoginPage.java</file>
-            <file>file:/C:/Users/Dell/Desktop/Projects/haranah-qa/test/pages/buyers/BuyerChangePasswordPage.java</file>
-            <file>file:/C:/Users/Dell/Desktop/Projects/haranah-qa/test/tests/buyers/BuyerChangePasswordTest.java</file>
+            <file>file:/C:/Users/Dell/Desktop/Projects/research-division-test/test/tests/researchandrecords/OrdinanceTest.java</file>
+            <file>file:/C:/Users/Dell/Desktop/Projects/research-division-test/test/pages/researchandrecords/OrdinancePage.java</file>
+            <file>file:/C:/Users/Dell/Desktop/Projects/research-division-test/test/tests/researchandrecords/LoginTest.java</file>
+            <file>file:/C:/Users/Dell/Desktop/Projects/research-division-test/test/pages/LoginPage.java</file>
+            <file>file:/C:/Users/Dell/Desktop/Projects/research-division-test/test/pages/researchandrecords/HomePage.java</file>
         </group>
     </open-files>
 </project-private>
